@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Data Science & Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #3498db;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-title {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .achievements {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .achievement-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .achievement-item::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header, .section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .skills-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data Science Portfolio</h1>
+            <p class="subtitle">Exploring the intersection of technology, data, and innovation</p>
+            <div class="contact-info">
+                📧 Contact: <!--email_off-->23f2004203@ds.study.iitm.ac.in<!--/email_off-->
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I'm a passionate data science student at IIT Madras, dedicated to leveraging data-driven insights to solve real-world problems. My journey spans across machine learning, statistical analysis, and modern web technologies, always with a focus on creating meaningful impact through innovative solutions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🐍 Python & Data Science</h3>
+                    <p>Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Seaborn</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📊 Statistical Analysis</h3>
+                    <p>Hypothesis Testing, Regression Analysis, Time Series, A/B Testing</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🤖 Machine Learning</h3>
+                    <p>Supervised/Unsupervised Learning, Deep Learning, NLP, Computer Vision</p>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Web Technologies</h3>
+                    <p>HTML, CSS, JavaScript, React, Node.js, Database Management</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">Predictive Analytics Dashboard</div>
+                    <div class="project-description">
+                        Built an interactive dashboard for real-time data visualization and predictive modeling, enabling stakeholders to make data-driven decisions with confidence.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Plotly</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Customer Segmentation Analysis</div>
+                    <div class="project-description">
+                        Implemented advanced clustering algorithms to segment customers based on behavior patterns, resulting in targeted marketing strategies and improved conversion rates.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">K-Means</span>
+                        <span class="tech-tag">PCA</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Natural Language Processing Tool</div>
+                    <div class="project-description">
+                        Developed a comprehensive NLP pipeline for sentiment analysis and text classification, processing thousands of documents with high accuracy and efficiency.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">spaCy</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Time Series Forecasting Model</div>
+                    <div class="project-description">
+                        Created robust forecasting models for business metrics, incorporating seasonal patterns and external factors to deliver accurate predictions for strategic planning.
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">ARIMA</span>
+                        <span class="tech-tag">Prophet</span>
+                        <span class="tech-tag">Statsmodels</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education & Achievements</h2>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <strong>IIT Madras - Data Science Program</strong><br>
+                    Pursuing advanced studies in statistical methods, machine learning, and data engineering
+                </div>
+                <div class="achievement-item">
+                    <strong>Research & Publications</strong><br>
+                    Contributing to cutting-edge research in applied data science and statistical modeling
+                </div>
+                <div class="achievement-item">
+                    <strong>Open Source Contributions</strong><br>
+                    Active contributor to data science libraries and educational resources
+                </div>
+                <div class="achievement-item">
+                    <strong>Competition Achievements</strong><br>
+                    Participated in various data science competitions and hackathons
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Data Science Portfolio | Built with passion for data and innovation</p>
+            <p>Contact me at <!--email_off-->23f2004203@ds.study.iitm.ac.in<!--/email_off--> for collaborations and opportunities</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Add hover effects to project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.borderLeftColor = '#e74c3c';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.borderLeftColor = '#3498db';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
